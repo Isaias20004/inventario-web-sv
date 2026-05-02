@@ -2,7 +2,7 @@
   <section id="stack" class="py-24 px-6 max-w-5xl mx-auto reveal">
     <div class="section-badge">Tecnología</div>
     <h2 class="section-title">Stack<br><span class="gradient-text">Tecnológico</span></h2>
-    <p class="section-sub mb-12">El sistema está desarrollado con tecnologías modernas, robustas y de código abierto.</p>
+    <p class="section-sub mb-12">Tecnologías utilizadas para construir y desplegar esta landing page.</p>
 
     <div class="flex flex-wrap gap-3">
       <div
@@ -25,10 +25,11 @@
 
 <script setup lang="ts">
 const stack = [
-  { name: 'HTML, CSS, JavaScript', role: 'Frontend · Interfaz de usuario', color: '#F59E0B' },
-  { name: 'PHP', role: 'Backend · Lógica del servidor', color: '#8892BF' },
-  { name: 'MySQL', role: 'Base de datos relacional', color: '#00758F' },
-  { name: 'XAMPP', role: 'Servidor local de desarrollo', color: '#F16529' },
+  { name: 'Nuxt.js', role: 'Framework frontend · Vue 3', color: '#00DC82' },
+  { name: 'Tailwind CSS', role: 'Estilos · Diseño responsivo', color: '#38BDF8' },
+  { name: 'Vue 3', role: 'Framework reactivo de componentes', color: '#42B883' },
+  { name: 'Node.js', role: 'Entorno de ejecución · npm', color: '#8CC84B' },
   { name: 'Git & GitHub', role: 'Control de versiones', color: '#F05033' },
+  { name: 'Vercel', role: 'Deploy · Hosting en la nube', color: '#FFFFFF' },
 ]
 </script>
