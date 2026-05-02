@@ -4,7 +4,6 @@ module.exports = {
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
     './app.vue',
   ],
   theme: {
@@ -14,24 +13,15 @@ module.exports = {
         display: ['Sora', 'sans-serif'],
       },
       colors: {
-        navy: {
-          DEFAULT: '#0A0F1E',
-          2: '#0D1526',
-          3: '#111C35',
-        },
-        card: {
-          DEFAULT: '#131E38',
-          2: '#1A2744',
-        },
-        emerald: {
-          sv: '#00D68F',
-          dark: '#00B87A',
-          glow: '#00F5A0',
-        },
+        bg: { DEFAULT: '#07090F', 2: '#0C0F1A', 3: '#101525' },
+        card: { DEFAULT: '#0D1221', 2: '#111827' },
+        blue: { sv: '#3B82F6', light: '#60A5FA', lighter: '#93C5FD' },
+        indigo: { sv: '#6366F1' },
+        violet: { sv: '#8B5CF6' },
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease both',
-        'fade-up-delay': 'fadeUp 0.7s ease 0.2s both',
+        'fade-up-delay': 'fadeUp 0.7s ease 0.25s both',
         'fade-up-delay2': 'fadeUp 0.7s ease 0.4s both',
       },
       keyframes: {

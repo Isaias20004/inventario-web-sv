@@ -1,20 +1,17 @@
 <template>
   <section id="stack" class="py-24 px-6 max-w-5xl mx-auto reveal">
-
     <div class="section-badge">Tecnología</div>
-    <h2 class="section-title">
-      Stack<br>
-      <span class="gradient-text">Tecnológico</span>
-    </h2>
-    <p class="section-sub mb-12">
-      El sistema está desarrollado con tecnologías modernas, robustas y de código abierto.
-    </p>
+    <h2 class="section-title">Stack<br><span class="gradient-text">Tecnológico</span></h2>
+    <p class="section-sub mb-12">El sistema está desarrollado con tecnologías modernas, robustas y de código abierto.</p>
 
     <div class="flex flex-wrap gap-3">
       <div
         v-for="tech in stack"
         :key="tech.name"
-        class="flex items-center gap-3 bg-card-DEFAULT border border-white/7 rounded-xl px-5 py-4 transition-all duration-300 hover:border-blue-400/30 hover:-translate-y-0.5 cursor-default"
+        class="flex items-center gap-3 border rounded-xl px-5 py-4 transition-all duration-300 cursor-default hover:-translate-y-0.5"
+        style="background:#0D1221; border-color: rgba(59,130,246,0.12)"
+        @mouseover="$event.currentTarget.style.borderColor='rgba(59,130,246,0.4)'"
+        @mouseleave="$event.currentTarget.style.borderColor='rgba(59,130,246,0.12)'"
       >
         <div class="w-2.5 h-2.5 rounded-full flex-shrink-0" :style="{ background: tech.color }" />
         <div>
@@ -23,7 +20,6 @@
         </div>
       </div>
     </div>
-
   </section>
 </template>
 
