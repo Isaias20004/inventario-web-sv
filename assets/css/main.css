@@ -3,24 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --bg: #07090F;
-    --blue: #3B82F6;
-    --blue2: #60A5FA;
-    --blue3: #93C5FD;
-    --indigo: #6366F1;
-    --violet: #8B5CF6;
-    --border: rgba(59,130,246,0.12);
-    --border2: rgba(59,130,246,0.25);
-    --card: #0D1221;
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #07090F;
   }
 
-  html { scroll-behavior: smooth; }
-
   body {
-    background-color: #07090F;
-    color: #F8FAFF;
+    background-color: #07090F !important;
+    color: #F8FAFF !important;
     font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  #__nuxt {
+    background-color: #07090F;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,51 +36,97 @@
   }
 
   .btn-primary {
-    @apply font-bold font-display px-8 py-3 rounded-xl transition-all duration-200
-           hover:-translate-y-0.5 text-white;
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    color: #ffffff !important;
     background: linear-gradient(135deg, #3B82F6, #6366F1);
     box-shadow: 0 0 32px rgba(59,130,246,0.35);
+    transition: all 0.2s;
   }
   .btn-primary:hover {
+    transform: translateY(-2px);
     box-shadow: 0 0 50px rgba(99,102,241,0.5);
   }
 
   .btn-secondary {
-    @apply bg-blue-500/8 text-slate-100 font-semibold font-display
-           px-8 py-3 rounded-xl border transition-all duration-200
-           hover:bg-blue-500/15;
-    border-color: rgba(59,130,246,0.25);
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    color: #F8FAFF !important;
+    background: rgba(59,130,246,0.08);
+    border: 1px solid rgba(59,130,246,0.25);
+    transition: all 0.2s;
   }
   .btn-secondary:hover {
+    background: rgba(59,130,246,0.15);
     border-color: rgba(99,102,241,0.5);
   }
 
   .card-base {
-    background: #0D1221;
-    @apply border rounded-2xl p-6 transition-all duration-300 cursor-default;
-    border-color: rgba(59,130,246,0.12);
+    background: #0D1221 !important;
+    border: 1px solid rgba(59,130,246,0.12);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: all 0.3s;
+    cursor: default;
   }
 
   .section-badge {
-    @apply inline-block px-3.5 py-1 rounded-full text-xs font-bold font-display
-           tracking-widest uppercase mb-4;
+    display: inline-block;
     background: rgba(59,130,246,0.10);
     border: 1px solid rgba(59,130,246,0.25);
     color: #60A5FA;
+    padding: 0.3rem 0.875rem;
+    border-radius: 99px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: 'Sora', sans-serif;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .section-title {
-    @apply text-4xl font-extrabold font-display tracking-tight leading-tight mb-4;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #F8FAFF;
   }
 
   .section-sub {
-    @apply text-slate-400 text-lg max-w-xl;
+    color: #94A3B8;
+    font-size: 1.05rem;
+    max-width: 540px;
   }
 
   .feat-icon {
-    @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
     background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(99,102,241,0.10));
   }
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 .reveal {
@@ -92,11 +137,4 @@
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
